@@ -1,0 +1,13 @@
+Link : https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+
+# @Abhrajyoti
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    arr = [i for i in arr]
+    arr.sort()
+    val= arr[n-1]
+    arr= [item for item in arr if item!=val]
+    arr.sort()
+    print(arr[len(arr)-1])
