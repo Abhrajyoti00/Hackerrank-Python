@@ -1,0 +1,32 @@
+Link : https://www.hackerrank.com/challenges/python-lists/problem
+
+
+# @Abhrajyoti
+
+
+if __name__ == '__main__':
+    N = int(input())
+    l=[]
+    for i in range(N):
+        com = input()
+        if com.startswith('insert'):
+            t = com.split()
+            l.insert(int(t[1]),int(t[2]))
+        elif com == 'print':
+            print(l)
+        elif com.startswith('remove'):
+            t = com.split()
+            a = int(t[1])
+            l.remove(a)
+        elif com.startswith('append'):
+            t = com.split()
+            a = int(t[1])
+            l.append(a)
+        elif com == 'sort':
+            l.sort()
+        elif com =='pop':
+            l.pop()
+        elif com == 'reverse':
+            l.reverse()
+        
+
