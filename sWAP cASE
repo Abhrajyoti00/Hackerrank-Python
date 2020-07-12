@@ -1,0 +1,19 @@
+Link : https://www.hackerrank.com/challenges/swap-case/problem
+
+@Abhrajyoti
+
+def swap_case(s):
+    ns=''
+    for _ in s:
+        if _.isupper():
+            ns+=_.lower()
+        elif _.islower():
+            ns+=_.upper()
+        else:
+            ns+=_
+    return ns
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
