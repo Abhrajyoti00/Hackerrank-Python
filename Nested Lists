@@ -1,0 +1,22 @@
+Problem Link : https://www.hackerrank.com/challenges/nested-list/problem
+
+Soln : 
+
+# @ Abhrajyoti Kundu
+
+if __name__ == '__main__':
+    fl=[]
+    m=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        l = [name,score]
+        fl.append(l)
+    fl.sort(key = lambda x : x[1])
+    fl = [i for i in fl if i[1]!=fl[0][1]]
+    val = fl[0][1]
+    fl = [item for item in fl if item[1]== val]
+    fl = [item[0] for item in fl if item[1]== val]
+    fl.sort()
+    for item in fl:
+        print(item)
