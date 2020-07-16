@@ -1,0 +1,24 @@
+Link : https://www.hackerrank.com/challenges/designer-door-mat/problem
+
+@Abhrajyoti Kundu
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n,m = map(int,input().split())
+c='.|.'
+l = []
+l = [((c*(2*i +1)).center(m,'-')) for i in range(n//2)]
+print('\n'.join(l + ['WELCOME'.center(m,'-')] + l[::-1]))
+
+
+OUTPUT for 7,21
+---------------
+
+---------.|.---------
+------.|..|..|.------
+---.|..|..|..|..|.---
+-------WELCOME-------
+---.|..|..|..|..|.---
+------.|..|..|.------
+---------.|.---------
