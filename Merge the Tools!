@@ -1,0 +1,35 @@
+Link : https://www.hackerrank.com/challenges/merge-the-tools/copy-from/169537051
+
+@Abhrajyoti
+
+
+def merge_the_tools(string, k):
+    for i in range(0, len(string), k):
+        s = ""
+        for j in string[i : i + k]:
+            if j not in s:
+                s += j          
+        print(s)
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
+    
+ ------------------ 
+    OR
+ -----------------
+    
+   
+def rem(string):
+    s=''.join([j for i,j in enumerate(string) if j not in string[:i]])
+    return(s)
+def merge_the_tools(string, k):
+    t = k
+    l=[]
+    l = [string[i:i+t] for i in range(0,len(string),t)]
+    for i in l:
+        print(rem(i))
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
