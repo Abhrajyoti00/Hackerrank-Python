@@ -1,0 +1,33 @@
+Link : https://www.hackerrank.com/challenges/the-minion-game/problem?isFullScreen=false&utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+
+@Abhrajyoti
+
+# def count_sub(string,sub):
+#     return (sum([1 for i in range(len(string)-len(sub)+1) if string[i:i+len(sub)]==sub]))
+
+# def subv(string,vowels):
+#     d= sum(1 for i, x in enumerate(string) for j in range(i + 1, len(string) + 1) if x in vowels)
+#     # return len(d)
+#     return (d)
+# def subc(string,vowels):
+#     d= sum(1 for i, x in enumerate(string) for j in range(i + 1, len(string) + 1) if x not in vowels)
+#     # return len(d)
+#     return (d)
+def minion_game(s):
+    vowels = 'AEIOU'
+    kevin = stuart = 0
+    for i in range(len(s)):
+        if(s[i] in vowels):
+            kevin+=len(s)-i
+        else:
+            stuart+=len(s)-i
+    
+    if kevin>stuart:
+        print('Kevin {}'.format(kevin))
+    elif kevin<stuart:
+        print('Stuart {}'.format(stuart))
+    else:
+        print('Draw')
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
