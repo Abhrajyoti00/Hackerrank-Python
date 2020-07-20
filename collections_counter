@@ -1,0 +1,24 @@
+Link : https://www.hackerrank.com/challenges/collections-counter/problem
+
+@Abhrajyoti
+
+
+from collections import Counter
+
+X = int(input())
+sizes = input().split()
+# print(sizes)
+d = Counter(sizes)
+# print(d)
+n=int(input())
+tot = 0
+for i in range(n):
+    s,p=input().split()
+    # print(d)
+    if s in d and d[s]>0:
+        # print("yes" + s)
+        tot+=int(p)
+        d[s]-=1
+    elif d[s]<0:
+        d.pop(s)
+print(tot)
