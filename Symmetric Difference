@@ -1,0 +1,18 @@
+Link : https://www.hackerrank.com/challenges/symmetric-difference/problem
+
+@Abhrajyoti Kundu
+
+m = int(input())
+M = set(map(int,input().split()))
+n = int(input())
+N = set(map(int,input().split()))
+
+a = list(M.difference(N))
+b = list(N.difference(M))
+
+l = a + b
+
+l.sort()
+
+for i in l :
+    print(i)
