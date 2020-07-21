@@ -1,0 +1,19 @@
+Link : https://www.hackerrank.com/challenges/py-set-mutations/problem
+
+@Abhrajyoti
+
+a = int(input())
+A = set(map(int,input().split()))
+n = int(input())
+for _ in range (n):
+    opn = input()
+    ele = set(map(int,input().split()))
+    if opn[0] == 'i':
+        A.intersection_update(ele)
+    if opn[0] == 'u':
+        A.update(ele)
+    if opn[0] == 's':
+        A.symmetric_difference_update(ele)
+    if opn[0] == 'd':
+        A.difference_update(ele)
+print(sum(list(A)))
