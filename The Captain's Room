@@ -1,0 +1,11 @@
+Link : https://www.hackerrank.com/challenges/py-the-captains-room/problem
+
+@Abhrajyoti
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+k= int(input())
+l = Counter(input().split())
+for _ in l.keys():
+    if l[_] == 1:
+        print(_)
