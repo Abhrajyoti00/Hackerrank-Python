@@ -1,0 +1,10 @@
+Link : https://www.hackerrank.com/challenges/py-set-union/problem
+
+@Abhrajyoti
+
+
+n = int(input())
+rolle =set(map(int,input().split()))
+b = int(input())
+rollf =set(map(int,input().split()))
+print(len(list(rolle|rollf)))
